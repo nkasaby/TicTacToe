@@ -36,8 +36,7 @@ public class TicTacToe {
         if (player.equals("player1")) {
             System.out.print("Please enter the position of your choice from 1-9:");
             Scanner player1PositionChoice = new Scanner(System.in);
-            byte player1Position = player1PositionChoice.nextByte();
-            position = player1Position;
+            position = player1PositionChoice.nextByte();
             piece = 'X';
         }
         if (player.equals("computer")){
