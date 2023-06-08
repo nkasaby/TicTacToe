@@ -11,9 +11,11 @@ public class TicTacToe {
                 {'4', '|', '5', '|', '6'},
                 {'-', '-', '-', '-', '-'},
                 {'7', '|', '8', '|', '9'}};
+
         printGameBoard(gameBoard);
         System.out.println();
-        String result = winner();
+        String result ;
+
         while(winner().equals("")) {
             System.out.println("Player 1's turn:");
             choosePosition(gameBoard, "player1");
@@ -56,10 +58,16 @@ public class TicTacToe {
             System.out.print("Please enter the position of your choice from 1-9:");
             Scanner player1PositionChoice = new Scanner(System.in);
             byte player1Position = player1PositionChoice.nextByte();
-            position = player1Position;
+
+            while (player1Position < 1 || player1Position > 9 ){
+                System.out.println("Position chosen is out of range. Please enter a correct one.");
+                player1Position = player1PositionChoice.nextByte();
+                //position = player1Position;
+            }
+             position = player1Position;
 
             while (player1Positions.contains(position)||computerPositions.contains(position)){
-                System.out.println("Position is occupied, please choose another one.");
+                System.out.println("Position chosen by player 1 is occupied, please choose another one.");
                 player1Position = player1PositionChoice.nextByte();
                 position = player1Position;
 
@@ -67,18 +75,16 @@ public class TicTacToe {
 
             player1Positions.add(player1Position);
             piece = 'X';
-            System.out.println("p1 positions: " + player1Positions);
         }
         else if (player.equals("computer")){
             position = computerPosition;
 
             while (player1Positions.contains(position)||computerPositions.contains(position)){
-                System.out.println(" COMPUTER Position is occupied, please choose another one.");
+                System.out.println("Position chosen by computer is occupied, please choose another one.");
                 computerPosition = (byte) (computerPositionChoice.nextInt(9) + 1);
                 position = computerPosition;
             }
             computerPositions.add(position);
-            System.out.println("comp positions: " + computerPositions);
             piece = 'O';
         }
 

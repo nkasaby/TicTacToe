@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8b4c2b8-73b8-4a46-a131-28e68882bf8b" name="Changes" comment="fixed redundancy problem">
+    <list default="true" id="b8b4c2b8-73b8-4a46-a131-28e68882bf8b" name="Changes" comment="added the resuts + validations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
     </list>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686258160055</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added the resuts + validations">
+      <created>1686265469436</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686265469436</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -89,6 +96,7 @@
     <MESSAGE value="printing gameboard with each field marked with its position + choosing X or O depending on user" />
     <MESSAGE value="updated specifications" />
     <MESSAGE value="fixed redundancy problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed redundancy problem" />
+    <MESSAGE value="added the resuts + validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the resuts + validations" />
   </component>
 </project>
