@@ -62,7 +62,6 @@ public class TicTacToe {
             board[4][2] = piece;
         else if (position == 9)
             board[4][4] = piece;
-
         printGameBoard(board);
 
     }
