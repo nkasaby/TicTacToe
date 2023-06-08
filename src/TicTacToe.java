@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -9,7 +10,8 @@ public class TicTacToe {
                 {'-', '-', '-', '-', '-'},
                 {'7', '|', '8', '|', '9'}};
         printGameBoard(gameBoard);
-        choosePosition(gameBoard, "computer");
+        System.out.println();
+        choosePosition(gameBoard, "player1");
 
     }
 
@@ -24,16 +26,24 @@ public class TicTacToe {
     }
 
     public static void choosePosition(char[][] board, String player) {
-        System.out.print("Please enter the position of your choice from 1-9:");
-        Scanner positionChoice = new Scanner(System.in);
-        int position = positionChoice.nextInt();
 
+        Random computerPositionChoice = new Random();
+        byte computerPosition = (byte) (computerPositionChoice.nextInt(9) + 1);
+
+        byte position = 0;
         char piece = ' ';
 
-        if (player.equals("player1"))
+        if (player.equals("player1")) {
+            System.out.print("Please enter the position of your choice from 1-9:");
+            Scanner player1PositionChoice = new Scanner(System.in);
+            byte player1Position = player1PositionChoice.nextByte();
+            position = player1Position;
             piece = 'X';
-        if (player.equals("computer"))
+        }
+        if (player.equals("computer")){
+            position = computerPosition;
             piece = 'O';
+        }
 
         if (position == 1)
             board[0][0] = piece;
